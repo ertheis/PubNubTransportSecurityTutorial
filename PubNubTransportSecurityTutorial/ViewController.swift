@@ -12,7 +12,7 @@ class ViewController: UIViewController {
                             
     override func viewDidLoad() {
         super.viewDidLoad()
-        var myConfig = PNConfiguration(forOrigin: "pubsub.pubnub.com", publishKey: "demo", subscribeKey: "demo", secretKey: nil, cipherKey: "my_super_secret_cipherkey")
+        var myConfig = PNConfiguration(forOrigin: "pubsub.pubnub.com", publishKey: "demo", subscribeKey: "demo", secretKey: nil)
         myConfig.useSecureConnection = true;
         myConfig.reduceSecurityLevelOnError = false
         myConfig.ignoreSecureConnectionRequirement = false
