@@ -12,6 +12,7 @@
 		3D0BB765196DBB4C00868DF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D0BB763196DBB4C00868DF3 /* Main.storyboard */; };
 		3D0BB767196DBB4C00868DF3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D0BB766196DBB4C00868DF3 /* Images.xcassets */; };
 		3D0BB773196DBB4C00868DF3 /* PubNubTransportSecurityTutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0BB772196DBB4C00868DF3 /* PubNubTransportSecurityTutorialTests.swift */; };
+		672DD1E61F544FE591782BED /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEBAEDACA54B4435B7081C7F /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,9 @@
 		3D0BB76C196DBB4C00868DF3 /* PubNubTransportSecurityTutorialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PubNubTransportSecurityTutorialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D0BB771196DBB4C00868DF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D0BB772196DBB4C00868DF3 /* PubNubTransportSecurityTutorialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PubNubTransportSecurityTutorialTests.swift; sourceTree = "<group>"; };
+		3D0BB77C196DBC4C00868DF3 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		BC17CB000CE34F04BAFA121C /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		DEBAEDACA54B4435B7081C7F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				672DD1E61F544FE591782BED /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +65,8 @@
 				3D0BB75C196DBB4C00868DF3 /* PubNubTransportSecurityTutorial */,
 				3D0BB76F196DBB4C00868DF3 /* PubNubTransportSecurityTutorialTests */,
 				3D0BB75B196DBB4C00868DF3 /* Products */,
+				BC17CB000CE34F04BAFA121C /* Pods.xcconfig */,
+				9CF8D7255CA045D2B2314A25 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +85,7 @@
 				3D0BB75F196DBB4C00868DF3 /* AppDelegate.swift */,
 				3D0BB761196DBB4C00868DF3 /* ViewController.swift */,
 				3D0BB763196DBB4C00868DF3 /* Main.storyboard */,
+				3D0BB77C196DBC4C00868DF3 /* BridgingHeader.h */,
 				3D0BB766196DBB4C00868DF3 /* Images.xcassets */,
 				3D0BB75D196DBB4C00868DF3 /* Supporting Files */,
 			);
@@ -109,6 +117,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		9CF8D7255CA045D2B2314A25 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DEBAEDACA54B4435B7081C7F /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -116,9 +132,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D0BB776196DBB4C00868DF3 /* Build configuration list for PBXNativeTarget "PubNubTransportSecurityTutorial" */;
 			buildPhases = (
+				C2F8F74486964587B39C2D5A /* Check Pods Manifest.lock */,
 				3D0BB756196DBB4C00868DF3 /* Sources */,
 				3D0BB757196DBB4C00868DF3 /* Frameworks */,
 				3D0BB758196DBB4C00868DF3 /* Resources */,
+				29A206C145184DBD81FC307E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,6 +220,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29A206C145184DBD81FC307E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2F8F74486964587B39C2D5A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3D0BB756196DBB4C00868DF3 /* Sources */ = {
@@ -322,23 +373,27 @@
 		};
 		3D0BB777196DBB4C00868DF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC17CB000CE34F04BAFA121C /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = PubNubTransportSecurityTutorial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = PubNubTransportSecurityTutorial/BridgingHeader.h;
 			};
 			name = Debug;
 		};
 		3D0BB778196DBB4C00868DF3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC17CB000CE34F04BAFA121C /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = PubNubTransportSecurityTutorial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = PubNubTransportSecurityTutorial/BridgingHeader.h;
 			};
 			name = Release;
 		};
@@ -395,6 +450,7 @@
 				3D0BB778196DBB4C00868DF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3D0BB779196DBB4C00868DF3 /* Build configuration list for PBXNativeTarget "PubNubTransportSecurityTutorialTests" */ = {
 			isa = XCConfigurationList;
@@ -403,6 +459,7 @@
 				3D0BB77B196DBB4C00868DF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
