@@ -21,8 +21,7 @@ class ViewController: UIViewController {
         
         //let myChannel = PNChannel.channelWithName("demo", shouldObservePresence: false) as PNChannel
         
-        //channels are defined as an array.
-        
+        //multiple channels defined as an array.
         var myChannels: [PNChannel] = PNChannel.channelsWithNames(["my_secure_channel", "my_secure_channel_2"]) as [PNChannel]
         
         PNObservationCenter.defaultCenter().addClientConnectionStateObserver(self) { (origin: String!, connected: Bool!, error: PNError!) in
